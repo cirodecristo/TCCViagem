@@ -1,5 +1,23 @@
+.navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+.navigation a {
+    text-decoration: none;
+    display: block;
+    color: white;
+    padding: 1em;
+}
+
+.navigation a:hover{
+    background-color: palevioletred;
+}
+
 header {
-    background: blueviolet;
+    background: deepskyblue;
     color: whitesmoke;
 }
 

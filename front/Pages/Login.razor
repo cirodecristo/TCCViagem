@@ -1,31 +1,77 @@
 @page "/login"
+@using Services;
+@inject UserService service
 
-<p>
-<label>Nome</label>
-    <input type="text"/>
-</p>
+<div class="logregcontainer">
+    <div class="registercontainer">
+        <p>
+            <label>Nome Completo</label>
+            <input type="text" @bind-value="@name"/>
+        </p>
 
-<p>
-<label>Senha</label>
-    <input type="password"/>
-</p>
+        <p>
+            <label>Senha</label>
+            <input type="password" @bind-value="@password"/>
+        </p>
 
-<p>
-    <label>DataNascimento</label>
-    <input type="date"/>
-</p>
+        <p>
+            <label>Repetir Senha</label>
+            <input type="password" @bind-value="@repeatpassword"/>
+        </p>
 
-<p>
-    <label>Nome de Usuário</label>
-    <input type="text"/>
-</p>
+        <p>
+            <label>Data de Nascimento</label>
+            <input type="date" @bind-value="@birth"/>
+        </p>
 
-<button onclick="@CreateAccount">Criar Conta</button>
+        <p>
+            <label>Nome de Usuario</label>
+            <input type="text" @bind-value="@userId"/>
+        </p>
+
+        <button onclick="@CreateAccount">
+            Criar Conta
+        </button>
+    </div>
+    <div class="logincontainer">
+        <p>
+            <label>Nome de Usuario</label>
+            <input type="text" @bind-value="@userId"/>
+        </p>
+
+        <p>
+            <label>Senha</label>
+            <input type="password" @bind-value="@password"/>
+        </p>
+
+        <button onclick="@UserLogin">
+            Logar
+        </button>
+    </div>
+</div>
+
 
 @code 
 {
-    public void CreateAccount()
+    private string name;
+    private string password;
+    private string repeatpassword;
+    private DateTime birth;
+    private string userId;
+
+    public async void CreateAccount()
     {
-        
+        //UserService service = new UserService("https://localhost:7243");  quando adicionar o inject eleimina essa linha
+
+        await service.Register(
+            this.name, 
+            this.userId,
+            this.birth, 
+            this.password);
+    }
+
+    public async void UserLogin()
+    {
+
     }
 }

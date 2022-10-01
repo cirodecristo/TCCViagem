@@ -27,7 +27,7 @@ namespace back.Model
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=SNCCH01LABF112\\SQLEXPRESS;Initial Catalog=TDSABADO2;Integrated Security=True");
+                optionsBuilder.UseSqlServer("Data Source=SNCCH01LABF116\\SQLEXPRESS;Initial Catalog=TDSABADO2;Integrated Security=True");
             }
         }
 
