@@ -1,32 +1,44 @@
 using Microsoft.AspNetCore.Mvc;
+using dto;
 
 namespace back.Controllers;
 
+using Model;
+
 [ApiController]
-[Route("[controller]")]
-public class WeatherForecastController : ControllerBase
-{
-    private static readonly string[] Summaries = new[]
+[Route("user")]
+public class UserController : ControllerBase
+{   
+    [HttpPost("login")]   //tags com [] controlam sem que precise colocar classes
+    public IActionResult Login()
     {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
-
-    private readonly ILogger<WeatherForecastController> _logger;
-
-    public WeatherForecastController(ILogger<WeatherForecastController> logger)
-    {
-        _logger = logger;
+        //return.Ok(); return NotFound , return.ok("OI");
+        throw new NotImplementedException();
     }
 
-    [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<WeatherForecast> Get()
+    [HttpPost("register")]
+    public IActionResult Register([FromBody] UsuarioDTO user)
     {
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-        {
-            Date = DateTime.Now.AddDays(index),
-            TemperatureC = Random.Shared.Next(-20, 55),
-            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-        })
-        .ToArray();
+        //throw new NotImplementedException();
+        using TDSABADO2Context context = new TDSABADO2Context();
+        Usuario usuario = new Usuario();
+        usuario.Name = user.Name;
+        usuario.BirthDate = user.BirthDate;
+        usuario.UserId = user.UserId;
+        usuario.Userpass = user.Password;
+
+        context.Add(usuario);
+        context.SaveChanges();
+        
+
+        return Ok();
     }
+
+
+    [HttpPost("update")]
+    public IActionResult UpdateName()
+    {
+        throw new NotImplementedException();
+    }
+
 }
