@@ -17,14 +17,20 @@ public class UserService
     public async Task Register(
         string name,
         string userId,
-        DateTime birth,
+        string Email,
+        string City,
+        string Country,
+        string Phone,
         string password)
     {
         UsuarioDTO user = new UsuarioDTO();
         user.Name = name;
         user.UserId = userId;
         user.Password = password;
-        user.BirthDate = birth;
+        user.Email = Email;
+        user.City = City;
+        user.Country = Country;
+        user.Phone = Phone;
 
         var result = await client.PostAsJsonAsync("user/register", user);
     }

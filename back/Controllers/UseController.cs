@@ -20,10 +20,13 @@ public class UserController : ControllerBase
     public IActionResult Register([FromBody] UsuarioDTO user)
     {
         //throw new NotImplementedException();
-        using TDSABADO2Context context = new TDSABADO2Context();
+        using WebSiteViagemContext context = new WebSiteViagemContext();
         Usuario usuario = new Usuario();
         usuario.Name = user.Name;
-        usuario.BirthDate = user.BirthDate;
+        usuario.Email = user.Email;
+        usuario.City = user.City;
+        usuario.Country = user.Country;
+        usuario.Phone = user.Phone;
         usuario.UserId = user.UserId;
         usuario.Userpass = user.Password;
 

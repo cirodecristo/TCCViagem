@@ -8,93 +8,93 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TCCFran
 build_property.RootNamespace = TCCFran
-build_property.ProjectDir = c:\Users\franc\OneDrive\Documentos\GitHub\TCCFran\
+build_property.ProjectDir = C:\Users\franc\OneDrive\Documentos\GitHub\TCCViagem\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Users\franc\OneDrive\Documentos\GitHub\TCCFran
+build_property.MSBuildProjectDirectory = C:\Users\franc\OneDrive\Documentos\GitHub\TCCViagem
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/franc/OneDrive/Documentos/GitHub/TCCFran/App.razor]
+[C:/Users/franc/OneDrive/Documentos/GitHub/TCCViagem/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/franc/OneDrive/Documentos/GitHub/TCCFran/front/App.razor]
+[C:/Users/franc/OneDrive/Documentos/GitHub/TCCViagem/front/App.razor]
 build_metadata.AdditionalFiles.TargetPath = ZnJvbnRcQXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/franc/OneDrive/Documentos/GitHub/TCCFran/front/Pages/Index.razor]
+[C:/Users/franc/OneDrive/Documentos/GitHub/TCCViagem/front/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = ZnJvbnRcUGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/franc/OneDrive/Documentos/GitHub/TCCFran/front/Shared/SurveyPrompt.razor]
+[C:/Users/franc/OneDrive/Documentos/GitHub/TCCViagem/front/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = ZnJvbnRcU2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/franc/OneDrive/Documentos/GitHub/TCCFran/front/_Imports.razor]
+[C:/Users/franc/OneDrive/Documentos/GitHub/TCCViagem/front/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = ZnJvbnRcX0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/franc/OneDrive/Documentos/GitHub/TCCFran/Pages/Counter.razor]
+[C:/Users/franc/OneDrive/Documentos/GitHub/TCCViagem/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/franc/OneDrive/Documentos/GitHub/TCCFran/Pages/FetchData.razor]
+[C:/Users/franc/OneDrive/Documentos/GitHub/TCCViagem/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/franc/OneDrive/Documentos/GitHub/TCCFran/Pages/Index.razor]
+[C:/Users/franc/OneDrive/Documentos/GitHub/TCCViagem/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/franc/OneDrive/Documentos/GitHub/TCCFran/Shared/SurveyPrompt.razor]
+[C:/Users/franc/OneDrive/Documentos/GitHub/TCCViagem/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/franc/OneDrive/Documentos/GitHub/TCCFran/_Imports.razor]
+[C:/Users/franc/OneDrive/Documentos/GitHub/TCCViagem/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/franc/OneDrive/Documentos/GitHub/TCCFran/front/Pages/Login.razor]
+[C:/Users/franc/OneDrive/Documentos/GitHub/TCCViagem/front/Pages/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = ZnJvbnRcUGFnZXNcTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-yxwdmedqh6
 
-[c:/Users/franc/OneDrive/Documentos/GitHub/TCCFran/front/Shared/MainLayout.razor]
+[C:/Users/franc/OneDrive/Documentos/GitHub/TCCViagem/front/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = ZnJvbnRcU2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-po24un1iwh
 
-[c:/Users/franc/OneDrive/Documentos/GitHub/TCCFran/front/Shared/NavMenu.razor]
+[C:/Users/franc/OneDrive/Documentos/GitHub/TCCViagem/front/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = ZnJvbnRcU2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-t856iuj9uu
 
-[c:/Users/franc/OneDrive/Documentos/GitHub/TCCFran/Shared/MainLayout.razor]
+[C:/Users/franc/OneDrive/Documentos/GitHub/TCCViagem/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-4wx87w738b
 
-[c:/Users/franc/OneDrive/Documentos/GitHub/TCCFran/Shared/NavMenu.razor]
+[C:/Users/franc/OneDrive/Documentos/GitHub/TCCViagem/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-pl6cv9nzdn
 
-[c:/Users/franc/OneDrive/Documentos/GitHub/TCCFran/front/Pages/Error.cshtml]
+[C:/Users/franc/OneDrive/Documentos/GitHub/TCCViagem/front/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = ZnJvbnRcUGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/franc/OneDrive/Documentos/GitHub/TCCFran/front/Pages/_Host.cshtml]
+[C:/Users/franc/OneDrive/Documentos/GitHub/TCCViagem/front/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = ZnJvbnRcUGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/franc/OneDrive/Documentos/GitHub/TCCFran/front/Pages/_Layout.cshtml]
+[C:/Users/franc/OneDrive/Documentos/GitHub/TCCViagem/front/Pages/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = ZnJvbnRcUGFnZXNcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/franc/OneDrive/Documentos/GitHub/TCCFran/Pages/Error.cshtml]
+[C:/Users/franc/OneDrive/Documentos/GitHub/TCCViagem/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/franc/OneDrive/Documentos/GitHub/TCCFran/Pages/_Host.cshtml]
+[C:/Users/franc/OneDrive/Documentos/GitHub/TCCViagem/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/franc/OneDrive/Documentos/GitHub/TCCFran/Pages/_Layout.cshtml]
+[C:/Users/franc/OneDrive/Documentos/GitHub/TCCViagem/Pages/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
