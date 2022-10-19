@@ -1,0 +1,8 @@
+C:\Users\franc\OneDrive\Documentos\GitHub\TCCFran\obj\Debug\net6.0\TCCFran.csproj.AssemblyReference.cache
+C:\Users\franc\OneDrive\Documentos\GitHub\TCCFran\obj\Debug\net6.0\TCCFran.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\franc\OneDrive\Documentos\GitHub\TCCFran\obj\Debug\net6.0\TCCFran.AssemblyInfoInputs.cache
+C:\Users\franc\OneDrive\Documentos\GitHub\TCCFran\obj\Debug\net6.0\TCCFran.AssemblyInfo.cs
+C:\Users\franc\OneDrive\Documentos\GitHub\TCCFran\obj\Debug\net6.0\TCCFran.csproj.CoreCompileInputs.cache
+C:\Users\franc\OneDrive\Documentos\GitHub\TCCFran\obj\Debug\net6.0\TCCFran.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\franc\OneDrive\Documentos\GitHub\TCCFran\obj\Debug\net6.0\TCCFran.RazorAssemblyInfo.cache
+C:\Users\franc\OneDrive\Documentos\GitHub\TCCFran\obj\Debug\net6.0\TCCFran.RazorAssemblyInfo.cs
