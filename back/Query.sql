@@ -1,9 +1,11 @@
 use master
 go
 
-if exists(select*from sys.databases where name = 'WebSiteViagem')
-	drop database WebSiteViagem
-go
+if not exists(
+	select*
+	from sys.databases 
+	where name = 'WebSiteViagem'
+	)
 
 create database WebSiteViagem
 go
@@ -11,7 +13,7 @@ go
 use WebSiteViagem
 go
 
-create table Usuario(
+create table Usuarios(
 	ID int identity primary key,
 	Name varchar(100) not null,
 	Email varchar(100) not null, 

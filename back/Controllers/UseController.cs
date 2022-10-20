@@ -32,10 +32,10 @@ public class UserController : ControllerBase
 
     [HttpPost("register")]
     public IActionResult Register(
-        [FromBody] UsuarioDTO user
+        [FromBody]UsuariosDTO user
         )
     {
-        using WebSiteViagem context = new WebSiteViagemContext();
+        using WebSiteViagem Context = new WebSiteViagemContext();
 
         List<string> errors = new List<string>();
 
@@ -59,7 +59,7 @@ public class UserController : ControllerBase
             errors.Add("Número de telefone não foi informado");
         }
         
-        if(usuario.Name.Length < 5)
+        if(usuarios.Name.Length < 5)
         {
             //return BadRequest();
             errors.Add("O nome do usuário precisa conter ao menos 5 letras.");
@@ -76,16 +76,16 @@ public class UserController : ControllerBase
             return this.BadRequest(errors);
         }
 
-        Usuario usuario = new Usuario();
-        usuario.Name = user.Name;
-        usuario.Email = user.Email;
-        usuario.City = user.City;
-        usuario.Country = user.Country;
-        usuario.Phone = user.Phone;
-        usuario.UserId = user.UserId;
-        usuario.Userpass = user.Password;                  
+        Usuario usuarios = new Usuarios();
+        usuarios.Name = user.Name;
+        usuarios.Email = user.Email;
+        usuarios.City = user.City;
+        usuarios.Country = user.Country;
+        usuarios.Phone = user.Phone;
+        usuarios.UserId = user.UserId;
+        usuarios.Userpass = user.Password;                  
 
-        context.Add(usuario);
+        context.Add(usuarios);
         context.SaveChanges();
         
         return Ok();

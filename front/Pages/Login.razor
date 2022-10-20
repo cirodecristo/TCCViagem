@@ -79,8 +79,6 @@
 
     public async void CreateAccount()
     {
-        //UserService service = new UserService("https://localhost:7243");  quando adicionar o inject eleimina essa linha
-
         await service.Register(
             this.name, 
             this.userId,
