@@ -4,9 +4,17 @@
 
 @inject UserService service
 
+@inject NavigationManager
+
 <div class="logregcontainer">
     
     <div class="logincontainer">
+        @if (loginError != "")
+        {
+        <p>
+            <label style="color: red;">@loginError</label>
+        </p>
+        }
         <p>
             <label>E-mail</label>
             <input type="text" @bind-value="@email"/>
@@ -33,6 +41,7 @@
     private string country;
     private string phone; 
     private string userId;
+    private string loginError;
 
     public async void UserLogin()
     {
@@ -42,12 +51,10 @@
         );
         if (result == null)
         {
-            Console.WriteLine("Não logou");
+            loginError = "Senha ou login incorreto.";
+            StateHasChanged();
+            return;
         }
-        else
-        {
-            Console.WriteLine("Logou");
-        }
-
+         
     }
 }

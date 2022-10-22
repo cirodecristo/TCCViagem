@@ -4,6 +4,8 @@
 
 @inject UserService service
 
+@inject NavigationManager
+
 <div class="logregcontainer">
     <div class="registercontainer">
         <p>
@@ -75,6 +77,17 @@
             this.country,
             this.phone,
             this.password);
+
+        this.name = ""; 
+        this.userId = "";
+        this.email = "";
+        this.city = "";
+        this.country = "";
+        this.phone = "";
+        this.password = "";
+
+        this.StateHasChanged();
+
     }
 
     public async void UserLogin()
