@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace back.Model
 {
-    public partial class Usuarios
+    public partial class Usuario
     {
-        public Usuarios()
+        public Usuario()
        
         public int Id { get; set; }
         public string Name { get; set; } = null!;

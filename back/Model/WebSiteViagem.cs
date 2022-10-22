@@ -16,7 +16,7 @@ namespace back.Model
         {
         }
 
-        public virtual DbSet<Usuarios> Usuarios { get; set; } = null!;
+        public virtual DbSet<Usuario> Usuario { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -29,7 +29,7 @@ namespace back.Model
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             
-            modelBuilder.Entity<Usuarios>(entity =>
+            modelBuilder.Entity<Usuario>(entity =>
             {
                 entity.ToTable("Usuario");
 

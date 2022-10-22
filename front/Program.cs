@@ -2,12 +2,11 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using front.Services;
 
-
 var builder = WebApplication.CreateBuilder(args);
+
 
 string server = "https://localhost:7243";
 
-//Esse if é para o caso de estar em produção ele acessa a nuvem
 //if(builder.Environment.IsProduction())
 //{
  //   server = "link da nuvem";
@@ -16,7 +15,8 @@ string server = "https://localhost:7243";
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton(provider => new UserService(server));
+builder.Services.AddSingleton(
+    provider => new UserService(server));
 
 var app = builder.Build();
 

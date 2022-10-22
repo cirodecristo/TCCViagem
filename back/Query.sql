@@ -13,7 +13,7 @@ go
 use WebSiteViagem
 go
 
-create table Usuarios(
+create table Usuario(
 	ID int identity primary key,
 	Name varchar(100) not null,
 	Email varchar(100) not null, 

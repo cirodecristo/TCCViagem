@@ -14,10 +14,9 @@ public class UserController : ControllerBase
         [FromBody]UsuarioDTO user
     )
     {
-        using WebSiteViagemContext context 
-            = new WebSiteViagemContext();
+        using WebSiteViagemContext context = new WebSiteViagemContext();
         
-        var possibleUser = context.Usuarios
+        var possibleUser = context.Usuario
             .FirstOrDefault(
                 u => u.UserId == user.UserId);
         
@@ -32,7 +31,7 @@ public class UserController : ControllerBase
 
     [HttpPost("register")]
     public IActionResult Register(
-        [FromBody]UsuariosDTO user
+        [FromBody]UsuarioDTO user
         )
     {
         using WebSiteViagem Context = new WebSiteViagemContext();
@@ -65,7 +64,7 @@ public class UserController : ControllerBase
             errors.Add("O nome do usuário precisa conter ao menos 5 letras.");
         }
 
-        if (context.Usuarios
+        if (context.Usuario
             .Any(u => u.UserId == user.UserId))
             {
                 errors.Add("Seu nome de usuário já está em uso!");
@@ -76,16 +75,16 @@ public class UserController : ControllerBase
             return this.BadRequest(errors);
         }
 
-        Usuario usuarios = new Usuarios();
-        usuarios.Name = user.Name;
-        usuarios.Email = user.Email;
-        usuarios.City = user.City;
-        usuarios.Country = user.Country;
-        usuarios.Phone = user.Phone;
-        usuarios.UserId = user.UserId;
-        usuarios.Userpass = user.Password;                  
+        Usuario usuario = new Usuario();
+        usuario.Name = user.Name;
+        usuario.Email = user.Email;
+        usuario.City = user.City;
+        usuario.Country = user.Country;
+        usuario.Phone = user.Phone;
+        usuario.UserId = user.UserId;
+        usuario.Userpass = user.Password;                  
 
-        context.Add(usuarios);
+        context.Add(usuario);
         context.SaveChanges();
         
         return Ok();
