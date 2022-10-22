@@ -4,9 +4,9 @@
 
 @inject UserService service
 
-@inject NavigationManager
+@inject NavigationManager nav
 
-<div class="logregcontainer">
+<div class="logregcontainer">   
     
     <div class="logincontainer">
         @if (loginError != "")
@@ -56,5 +56,6 @@
             return;
         }
          
+         nav.NavigateTo("/");
     }
 }
