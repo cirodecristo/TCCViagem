@@ -5,55 +5,11 @@
 @inject UserService service
 
 <div class="logregcontainer">
-    <div class="registercontainer">
-        <p>
-            <label>Nome Completo</label>
-            <input type="text" @bind-value="@name"/>
-        </p>
-
-        <p>
-            <label>Senha</label>
-            <input type="password" @bind-value="@password"/>
-        </p>
-
-        <p>
-            <label>Repetir Senha</label>
-            <input type="password" @bind-value="@repeatpassword"/>
-        </p>
-
-        <p>
-            <label>Email</label>
-            <input type="text" @bind-value="@email"/>
-        </p>
-
-        <p>
-            <label>Cidade</label>
-            <input type="text" @bind-value="@city"/>
-        </p>
-
-        <p>
-            <label>País</label>
-            <input type="text" @bind-value="@country"/>
-        </p>
-
-        <p>
-            <label>Telefone</label>
-            <input type="text" @bind-value="@phone"/>
-        </p>
-
-        <p>
-            <label>Nome de Usuario</label>
-            <input type="text" @bind-value="@userId"/>
-        </p>
-
-        <button onclick="@CreateAccount">
-            Criar Conta
-        </button>
-    </div>
+    
     <div class="logincontainer">
         <p>
-            <label>Nome de Usuario</label>
-            <input type="text" @bind-value="@userId"/>
+            <label>E-mail</label>
+            <input type="text" @bind-value="@email"/>
         </p>
 
         <p>
@@ -62,11 +18,10 @@
         </p>
 
         <button onclick="@UserLogin">
-            Logar
+            Entrar
         </button>
     </div>
 </div>
-
 
 @code 
 {
@@ -78,18 +33,6 @@
     private string country;
     private string phone; 
     private string userId;
-
-    public async void CreateAccount()
-    {
-        await service.Register(
-            this.name, 
-            this.userId,
-            this.email,
-            this.city,
-            this.country,
-            this.phone,
-            this.password);
-    }
 
     public async void UserLogin()
     {

@@ -13,11 +13,11 @@
 }
 
 .navigation a:hover{
-    background-color: palevioletred;
+    background-color: yellowgreen;
 }
 
 header {
-    background: deepskyblue;
+    background: black;
     color: whitesmoke;
 }
 

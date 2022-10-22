@@ -1,0 +1,23 @@
+.registercontainer {
+    padding: 10px;
+    background-color: grey;
+    border: 5px;
+    border-color: white;
+    border-radius: 5px;
+    width: 880px;
+    height: 503px;
+    left: 181px;
+    top: 220px;
+ }
+ 
+ .logregcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: right;
+ }
+
+ .p label{
+    position: left;
+ }
+ 

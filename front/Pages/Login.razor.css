@@ -1,17 +1,14 @@
-.registercontainer {
-   padding: 10px;
-   background-color: cadetblue;
-   border: 5px;
-   border-color: black;
-   border-radius: 5px;
-}
-
 .logincontainer{
    padding: 10px;
-   background-color: cadetblue;
+   background-color: grey;
    border: 5px;
-   border-color: black;
+   border-color: blue;
    border-radius: 5px;
+   position: center;
+   width: 530px;
+   height: 250px;
+   left: 117px;
+   top: 208px;
 }
 
 .logregcontainer{
@@ -19,5 +16,6 @@
    flex-direction: row;
    justify-content: space-around;
    align-items: center;
+   background: #E5E5E5;
+   border-radius: 10px;
 }
-
