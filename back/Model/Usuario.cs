@@ -5,6 +5,11 @@ namespace back.Model
 {
     public partial class Usuario
     {
+        public Usuario()
+        {
+            Tokens = new HashSet<Token>();
+        }
+
         public int Id { get; set; }
         public string Name { get; set; } = null!;
         public string Email { get; set; } = null!;
@@ -13,5 +18,7 @@ namespace back.Model
         public string Phone { get; set; } = null!;
         public string UserId { get; set; } = null!;
         public string Userpass { get; set; } = null!;
+
+        public virtual ICollection<Token> Tokens { get; set; }
     }
 }

@@ -16,7 +16,8 @@ namespace back.Model
         {
         }
 
-        public virtual DbSet<Usuario> Usuario { get; set; } = null!;
+        public virtual DbSet<Token> Tokens { get; set; } = null!;
+        public virtual DbSet<Usuario> Usuarios { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -29,6 +30,22 @@ namespace back.Model
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Token>(entity =>
+            {
+                entity.ToTable("token");
+
+                entity.Property(e => e.Id).HasColumnName("ID");
+
+                entity.Property(e => e.UserId).HasColumnName("UserID");
+
+                entity.Property(e => e.Value).IsUnicode(false);
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.Tokens)
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("FK__token__UserID__1273C1CD");
+            });
+
             modelBuilder.Entity<Usuario>(entity =>
             {
                 entity.ToTable("Usuario");

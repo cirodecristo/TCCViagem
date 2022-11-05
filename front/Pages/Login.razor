@@ -7,7 +7,7 @@
 @inject NavigationManager nav
 @inject ProtectedSessionStorage storage
 
-<div class="logregcontainer">   
+<div class="logincontainer">   
     
     <div class="logincontainer">
         @if (loginError != "")
@@ -47,7 +47,7 @@
     public async void UserLogin()
     {
         var result = await service.Login(
-            this.userId,
+            this.email,
             this.password
         );
         

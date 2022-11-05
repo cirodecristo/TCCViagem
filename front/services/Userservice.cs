@@ -38,12 +38,12 @@ public class UserService
     }
 
     public async Task<string> Login(
-        string userId,
+        string email,
         string password
     )
     {
         UsuarioDTO user = new UsuarioDTO();
-        user.UserId = userId;
+        user.Email = email;
         user.Password = password;
 
         var result = await client
@@ -52,8 +52,12 @@ public class UserService
         if (result.StatusCode != HttpStatusCode.OK)
             return null;
 
-        var token = await result.Content.ReadAsStringAsync();
-        return token;
+        var content = await result.Content.ReadFromJsonAsync<RequestMessage<string>>();
+
+        if (content.Status != "Success")
+            return null;
+
+        return content.Content;
         
     }
 }

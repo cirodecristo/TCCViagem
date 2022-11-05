@@ -7,9 +7,10 @@ using Model;
 public class TokenService
 {
     public int TokenSize {get; private set; }
-    public TokenService(int TokenSize)
+    public TokenService(int tokenSize) 
     {
-        this.TokenSize = TokenSize;
+        this.TokenSize = tokenSize; 
+
     }
     public async Task<Token> CreateToken (Usuario user)
     {
@@ -68,7 +69,7 @@ public class TokenService
             return null;
         
         var userId = token.UserId;
-        var user = context.Usuario.FirstOrDefault(
+        var user = context.Usuarios.FirstOrDefault(
             u => u.Id == userId);
         
         return user;

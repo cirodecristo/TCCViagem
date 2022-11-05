@@ -10,25 +10,37 @@ using Model;
 [Route("user")]
 public class UserController : ControllerBase
 {   
-    [HttpPost("login")]   //tags com [] controlam sem que precise colocar classes
-    public IActionResult Login(
+    [HttpPost("login")]   
+    public async Task<IActionResult> Login(
         [FromBody]UsuarioDTO user,
         [FromServices]TokenService service
     )
     {
+        Console.WriteLine("OI marcos aurelio devolve minha filha.");
         using WebSiteViagemContext context = new WebSiteViagemContext();
         
         var possibleUser = context.Usuarios
              .FirstOrDefault(
-                 u => u.UserId == user.UserId);
+                 u => u.Email == user.Email);
         
         if (possibleUser == null)
-             return BadRequest("Nome de usuário inválido");
+             return this.Ok(new {
+                    Message = "Nome de usuário inválido",
+                    Status = "Validation Error"
+                });
 
          if (possibleUser.Userpass != user.Password)
-            return BadRequest("Senha inválida!");
+             return this.Ok(new {
+                    Message = "Senha inválida!",
+                    Status = "Validation Error"
+                });
         
-        return Ok(token.Value);
+        var token = await service.CreateToken(possibleUser);
+        return this.Ok(new {
+                    Message = "Login realizado com sucesso",
+                    Status = "Success",
+                    Content = token.Value
+                });
     }
 
     [HttpPost("register")]
@@ -36,7 +48,7 @@ public class UserController : ControllerBase
         [FromBody]UsuarioDTO user
         )
     {
-         using WebSiteViagem Context = new WebSiteViagemContext();
+         using WebSiteViagemContext context = new WebSiteViagemContext();
 
          List<string> errors = new List<string>();
 
@@ -96,6 +108,7 @@ public class UserController : ControllerBase
     public IActionResult UpdateName()
     {
         throw new NotImplementedException();
+
     }
 
 }
