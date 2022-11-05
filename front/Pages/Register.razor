@@ -1,10 +1,11 @@
 @page "/register"
 
 @using Services;
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage
 
 @inject UserService service
-
-@inject NavigationManager
+@inject NavigationManager nav
+@inject ProtectedSessionStorage storage
 
 <div class="logregcontainer">
     <div class="registercontainer">
@@ -66,6 +67,7 @@
     private string country;
     private string phone; 
     private string userId;
+    private string loginError;
 
     public async void CreateAccount()
     {
@@ -90,20 +92,4 @@
 
     }
 
-    public async void UserLogin()
-    {
-        var result = await service.Login(
-            this.userId,
-            this.password
-        );
-        if (result == null)
-        {
-            Console.WriteLine("Não logou");
-        }
-        else
-        {
-            Console.WriteLine("Logou");
-        }
-
-    }
-}
+}    

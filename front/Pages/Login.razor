@@ -1,10 +1,11 @@
 @page "/login"
 
 @using Services;
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage
 
 @inject UserService service
-
 @inject NavigationManager nav
+@inject ProtectedSessionStorage storage
 
 <div class="logregcontainer">   
     
@@ -49,6 +50,7 @@
             this.userId,
             this.password
         );
+        
         if (result == null)
         {
             loginError = "Senha ou login incorreto.";
@@ -56,6 +58,7 @@
             return;
         }
          
-         nav.NavigateTo("/");
+        await storage.SetAsync("token", result);
+        nav.NavigateTo("/");
     }
 }

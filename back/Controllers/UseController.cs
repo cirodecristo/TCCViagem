@@ -3,6 +3,7 @@ using dto;
 
 namespace back.Controllers;
 
+using Services;
 using Model;
 
 [ApiController]
@@ -11,12 +12,13 @@ public class UserController : ControllerBase
 {   
     [HttpPost("login")]   //tags com [] controlam sem que precise colocar classes
     public IActionResult Login(
-        [FromBody]UsuarioDTO user
+        [FromBody]UsuarioDTO user,
+        [FromServices]TokenService service
     )
     {
         using WebSiteViagemContext context = new WebSiteViagemContext();
         
-        var possibleUser = context.Usuario
+        var possibleUser = context.Usuarios
              .FirstOrDefault(
                  u => u.UserId == user.UserId);
         
@@ -26,7 +28,7 @@ public class UserController : ControllerBase
          if (possibleUser.Userpass != user.Password)
             return BadRequest("Senha inválida!");
         
-        return Ok();
+        return Ok(token.Value);
     }
 
     [HttpPost("register")]
@@ -58,17 +60,16 @@ public class UserController : ControllerBase
              errors.Add("Número de telefone não foi informado");
          }
         
-         if(usuarios.Name.Length < 5)
+         if(user.Name.Length < 5)
          {
-             return BadRequest();
              errors.Add("O nome do usuário precisa conter ao menos 5 letras.");
          }
 
-         if (context.Usuario
-             .Any(u => u.UserId == user.UserId))
-             {
-                 errors.Add("Seu nome de usuário já está em uso!");
-             }
+         if (context.Usuarios
+            .Any(u => u.UserId == user.UserId))
+        {
+            errors.Add("Seu nome de usuário já está em uso!");
+        }
 
          if (errors.Count > 0)
          {

@@ -1,7 +1,7 @@
 using dto;
 using System.Net;
-using System.Threading.Tasks;
 using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace front.Services;
 
@@ -33,7 +33,8 @@ public class UserService
         user.Country = Country;
         user.Phone = Phone;
 
-        var result = await client.PostAsJsonAsync("user/register", user);
+        var result = await client
+            .PostAsJsonAsync("user/register", user);
     }
 
     public async Task<string> Login(
@@ -50,6 +51,9 @@ public class UserService
         
         if (result.StatusCode != HttpStatusCode.OK)
             return null;
-        return "Logado com Sucesso";
+
+        var token = await result.Content.ReadAsStringAsync();
+        return token;
+        
     }
 }
