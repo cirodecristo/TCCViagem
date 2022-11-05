@@ -11,7 +11,7 @@
    top: 208px;
 }
 
-.logregcontainer{
+.logcontainer{
    display: flex;
    flex-direction: row;
    justify-content: space-around;
