@@ -14,6 +14,7 @@ namespace back.Model
         public WebSiteViagemContext(DbContextOptions<WebSiteViagemContext> options)
             : base(options)
         {
+            
         }
 
         public virtual DbSet<Token> Tokens { get; set; } = null!;
@@ -24,7 +25,7 @@ namespace back.Model
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=SNCCH01LABF113\\TEW_SQLEXPRESS;Initial Catalog=WebSiteViagem;Integrated Security=True");
+                optionsBuilder.UseSqlServer("Data Source=LAPTOP-ENK8D0BG;Initial Catalog=WebSiteViagem;Integrated Security=True");
             }
         }
 

@@ -16,7 +16,6 @@ public class UserController : ControllerBase
         [FromServices]TokenService service
     )
     {
-        Console.WriteLine("OI marcos aurelio devolve minha filha.");
         using WebSiteViagemContext context = new WebSiteViagemContext();
         
         var possibleUser = context.Usuarios
