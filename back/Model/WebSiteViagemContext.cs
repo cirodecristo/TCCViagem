@@ -56,6 +56,10 @@ namespace back.Model
                 entity.Property(e => e.City)
                     .HasMaxLength(30)
                     .IsUnicode(false);
+                
+                entity.Property(e => e.State)
+                    .HasMaxLength(30)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.Country)
                     .HasMaxLength(30)
@@ -67,10 +71,6 @@ namespace back.Model
 
                 entity.Property(e => e.Name)
                     .HasMaxLength(100)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.Phone)
-                    .HasMaxLength(30)
                     .IsUnicode(false);
 
                 entity.Property(e => e.UserId)

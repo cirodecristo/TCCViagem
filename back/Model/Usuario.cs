@@ -14,8 +14,8 @@ namespace back.Model
         public string Name { get; set; } = null!;
         public string Email { get; set; } = null!;
         public string City { get; set; } = null!;
+        public string State { get; set; } = null!;
         public string Country { get; set; } = null!;
-        public string Phone { get; set; } = null!;
         public string UserId { get; set; } = null!;
         public string Userpass { get; set; } = null!;
 

@@ -7,11 +7,34 @@
 @inject NavigationManager nav
 @inject ProtectedSessionStorage storage
 
-<div class="formulariocontainer">   
-    
-    <div class="formulariocontainer">
-        
-        
+<div class="formulario">  
 
-    </div>
+    @* <div class = "formularioinicio">
+    
+        <h1>Por favor, preencha o formulario abaixo com o maior número de informações possível. Nos campos 
+            "Conte sua experiência" você pode fazer um relato livre sobre cada tema.</h1>
+    
+        <p>
+            <label>Cidade Visitada</label>
+            <input type="text" @bind-value="@visitedCity"/>
+        </p>
+
+        <p>
+            <label>Data de Chegada</label>
+            <input type="date" @bind-value="@arrivalDate"/>
+        </p>
+
+        <p>
+            <label>Data de retorno</label>
+            <input type="date" @bind-value="@departureDate"/>
+        </p>
+
+
+        <button onclick="@advance">
+            Avançar
+        </button>
+
+    </div> *@
+             
+    
 </div>

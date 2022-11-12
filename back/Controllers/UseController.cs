@@ -61,16 +61,16 @@ public class UserController : ControllerBase
              errors.Add("Cidade não foi informado");
          }
 
+         if (user.State == null)
+         {
+             errors.Add("Estado não foi informado");
+         }
+
          if (user.Country == null)
          {
              errors.Add("País não foi informado");
          }
-
-         if (user.Phone == null)
-         {
-             errors.Add("Número de telefone não foi informado");
-         }
-        
+              
          if(user.Name.Length < 5)
          {
              errors.Add("O nome do usuário precisa conter ao menos 5 letras.");
@@ -91,8 +91,8 @@ public class UserController : ControllerBase
          usuario.Name = user.Name;
          usuario.Email = user.Email;
          usuario.City = user.City;
+         usuario.State = user.State;
          usuario.Country = user.Country;
-         usuario.Phone = user.Phone;
          usuario.UserId = user.UserId;
          usuario.Userpass = user.Password;                  
 

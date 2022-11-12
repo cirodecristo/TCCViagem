@@ -20,8 +20,8 @@ public class UserService
         string userId,
         string Email,
         string City,
-        string Country,
-        string Phone,
+        string State,
+        string Country,        
         string password)
     {
         UsuarioDTO user = new UsuarioDTO();
@@ -30,8 +30,9 @@ public class UserService
         user.Password = password;
         user.Email = Email;
         user.City = City;
+        user.State = State;
         user.Country = Country;
-        user.Phone = Phone;
+        
 
         var result = await client
             .PostAsJsonAsync("user/register", user);

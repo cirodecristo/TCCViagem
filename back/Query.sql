@@ -18,8 +18,8 @@ create table Usuario(
 	Name varchar(100) not null,
 	Email varchar(100) not null, 
 	Cidade varchar(30) not null,
+	Estado varchar(30) not null,
 	Pais varchar(30) not null,
-	Telefone varchar(30) not null,
 	UserID varchar(60) not null, 
 	Userpass varchar(MAX) not null
 );
